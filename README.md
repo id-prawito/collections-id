@@ -52,7 +52,8 @@ Building and Running for Production in Heroku.
 
 ```bash
 # Download and Install Heroku CLI
-# If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+# If you haven't already, log in to your Heroku account and follow the prompts to create a new 
+# SSH public key.
 $ heroku login
 
 # Create New Git repository
