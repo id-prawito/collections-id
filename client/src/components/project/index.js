@@ -54,7 +54,7 @@ const Project = () => {
                             </div>
                         </div>
                         <div className="sort_create">
-                            <div className="button_hero">
+                            <div className="button_hero_sort">
                                 <div className="button_my-course">
                                     <div className="text">
                                         Sort A-Z Descending

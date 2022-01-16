@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // import { Link } from "react-scroll";
-// import { devices } from "../../assets/scss/_respondTo";
+import { devices } from "../../config/mediaQuery";
 import themeList from "../../config/themeList";
 
 export const HeaderSite = styled.header`
@@ -77,6 +77,10 @@ export const HeaderContainer = styled.div`
                     color: ${({ theme: { theme } }) =>
                         theme === themeList.light ? "#000" : "#fff"};
                     font-size: 14px;
+
+                    ${devices.smartphone} {
+                        display: none;
+                    }
                 }
             }
         }

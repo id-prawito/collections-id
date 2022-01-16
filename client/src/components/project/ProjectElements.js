@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import themeList from "../../config/themeList";
 // import "../../assets/scss/_index.scss";
-// import { devices } from "../../assets/scss/_respondTo";
+import { devices } from "../../config/mediaQuery";
 
 export const HeroSite = styled.section`
     display: flex;
@@ -108,6 +108,10 @@ export const HeroSite = styled.section`
             flex-direction: row;
             gap: 20px;
 
+            ${devices.smartphone} {
+                flex-direction: column;
+            }
+
             .button_my-course {
                 display: flex;
                 align-items: center;
@@ -159,6 +163,30 @@ export const HeroSite = styled.section`
         grid-template-columns: repeat(5, auto);
         gap: 20px;
 
+        @media only screen and (min-width: 320px) and (max-width: 580px) {
+            grid-template-columns: repeat(1, auto);
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: 580px) and (max-width: 830px) {
+            grid-template-columns: repeat(2, auto);
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: 830px) and (max-width: 1080px) {
+            grid-template-columns: repeat(3, auto);
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: 1080px) and (max-width: 1290px) {
+            grid-template-columns: repeat(4, auto);
+            align-items: center;
+            justify-content: center;
+        }
+
         .card {
             display: flex;
             flex-direction: column;
@@ -207,6 +235,18 @@ export const HeroSite = styled.section`
         flex-direction: row;
         justify-content: space-between;
 
+        ${devices.smartphone} {
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        ${devices.ipads} {
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+        }
+
         .from_search {
             display: flex;
             align-items: center;
@@ -223,6 +263,16 @@ export const HeroSite = styled.section`
             flex-direction: row;
             gap: 20px;
 
+            ${devices.smartphone} {
+                width: 100%;
+                height: 40px;
+            }
+
+            ${devices.ipads} {
+                width: 100%;
+                height: 40px;
+            }
+
             .button_my-course {
                 display: flex;
                 align-items: center;
@@ -235,6 +285,14 @@ export const HeroSite = styled.section`
                 gap: 10px;
                 transition: 0.3s all ease;
                 box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -15px;
+
+                ${devices.smartphone} {
+                    width: 100%;
+                }
+
+                ${devices.ipads} {
+                    width: 100%;
+                }
 
                 input {
                     border-radius: 4px;
@@ -288,6 +346,65 @@ export const HeroSite = styled.section`
             display: flex;
             flex-direction: row;
             gap: 20px;
+
+            ${devices.smartphone} {
+                flex-direction: column;
+            }
+
+            ${devices.ipads} {
+                flex-direction: column;
+            }
+        }
+
+        .button_hero_sort {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            ${devices.smartphone} {
+                width: 100%;
+                height: 40px;
+            }
+
+            ${devices.ipads} {
+                width: 100%;
+                height: 40px;
+            }
+
+            .button_my-course {
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+                padding: 4px 14px;
+                border-radius: 6px;
+                max-height: 100%;
+                font-size: 14px;
+                color: #000;
+                gap: 10px;
+                transition: 0.3s all ease;
+                box-shadow: rgb(2 12 27 / 70%) 0px 10px 30px -15px;
+
+                ${devices.smartphone} {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                ${devices.ipads} {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                input {
+                    border-radius: 4px;
+                    font-size: 14px;
+                    font-weight: 600;
+
+                    &:focus {
+                        border: none !important;
+                        outline: none;
+                    }
+                }
+            }
         }
     }
 `;

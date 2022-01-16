@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import ThemeSwitcher from "../../config/ThemeSwicter";
-import { HeaderContainer, HeaderSite } from "./HeaderComponents";
+import { HeaderContainer, HeaderSite } from "./HeaderElements";
 import profile from "../../assets/favicon.ico";
 import messi_white from "../../assets/logo_white.png";
 import messi_black from "../../assets/logo_black.png";
@@ -45,9 +45,7 @@ const Header = () => {
                             <div className="profile_img">
                                 <img src={profile} alt="logo" />
                             </div>
-                            <div className="text_profile">
-                                Collectionnnnnnnn
-                            </div>
+                            <div className="text_profile">Collections</div>
                         </div>
                     </div>
                 </div>

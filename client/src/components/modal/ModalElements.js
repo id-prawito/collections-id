@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FiX } from "react-icons/fi";
 import themeList from "../../config/themeList";
+import { devices } from "../../config/mediaQuery";
 
 export const Background = styled.div`
     width: 100%;
@@ -13,6 +14,10 @@ export const Background = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
+
+    ${devices.smartphone} {
+        padding: 0px 50px;
+    }
 `;
 
 export const ModalWrapper = styled.div`
@@ -125,5 +130,11 @@ export const Button = styled.button`
 
     &:hover {
         background: #2276c2;
+    }
+
+    svg {
+        ${devices.smartphone} {
+            display: none;
+        }
     }
 `;
