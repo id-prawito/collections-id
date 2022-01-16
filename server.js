@@ -46,7 +46,7 @@ app.post("/new/projects", (req, res) => {
     });
 });
 
-//delete projects
+//delete projectsss
 app.delete("/project/:id", (req, res) => {
     model
         .findById(req.params.id)
