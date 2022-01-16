@@ -2,7 +2,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-
+import path from "path";
 import model from "./model.js";
 
 // 2. initialize express app
