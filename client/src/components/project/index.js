@@ -24,7 +24,7 @@ const Project = () => {
 
     const deleteRequestHandler = async (id) => {
         const response = await axios.delete(
-            `http://localhost:9000/project/${id}`
+            `https://limitless-dawn-39905.herokuapp.com/project/${id}`
         );
 
         console.log(response);
