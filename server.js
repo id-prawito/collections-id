@@ -28,7 +28,7 @@ mongoose.connection.once("open", () => {
 });
 
 // 5. route
-app.get("/", (req, res) => res.status(200).send("Hello"));
+// app.get("/", (req, res) => res.status(200).send("Hello"));
 
 //get projects
 app.get("/get/projects", (req, res) => {
