@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { useContext } from "react";
 import GlobalStyles from "../config/GlobalStyles";
@@ -11,12 +11,10 @@ function App() {
     const { theme } = useContext(ThemeContext);
     return (
         <BrowserRouter>
-            <Route>
-                <ThemeProvider theme={{ theme }}>
-                    <GlobalStyles />
-                    <RouterSite />
-                </ThemeProvider>
-            </Route>
+            <ThemeProvider theme={{ theme }}>
+                <GlobalStyles />
+                <RouterSite />
+            </ThemeProvider>
         </BrowserRouter>
     );
 }
